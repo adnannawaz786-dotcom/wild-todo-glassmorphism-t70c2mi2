@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global CSS Variables for Wild Nature Colors */
+:root {
+  --forest-green: #2d5016;
+  --moss-green: #68a357;
+  --sage-green: #9caf88;
+  --earth-brown: #8b4513;
+  --bark-brown: #654321;
+  --sky-blue: #87ceeb;
+  --ocean-blue: #006994;
+  --sunset-orange: #ff6b35;
+  --golden-yellow: #ffd700;
+  --lavender-purple: #967bb6;
+  --stone-gray: #708090;
+  --mist-white: #f8f8ff;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, 
+    #2d5016 0%, 
+    #68a357 25%, 
+    #87ceeb 50%, 
+    #967bb6 75%, 
+    #ff6b35 100%);
+  background-size: 400% 400%;
+  animation: wildGradient 15s ease infinite;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Wild Nature Background Animation */
+@keyframes wildGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Utility Classes */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+}
+
+/* Wild Nature Themed Glass Variants */
+.glass-forest {
+  background: rgba(45, 80, 22, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(104, 163, 87, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(45, 80, 22, 0.4);
+}
+
+.glass-ocean {
+  background: rgba(0, 105, 148, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(135, 206, 235, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 105, 148, 0.3);
+}
+
+.glass-sunset {
+  background: rgba(255, 107, 53, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(255, 107, 53, 0.25);
+}
+
+/* Hover Effects for Glass Elements */
+.glass-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+}
+
+/* Custom Scrollbar with Wild Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(104, 163, 87, 0.6);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(104, 163, 87, 0.8);
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: var(--forest-green);
+}
+
+/* Focus Styles */
+.focus-wild:focus {
+  outline: none;
+  ring: 2px solid rgba(104, 163, 87, 0.6);
+  ring-offset: 2px;
+  ring-offset-color: transparent;
+}
+
+/* Text Shadows for Better Readability on Glass */
+.text-shadow-wild {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated Wild Elements */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.pulse-wild {
+  animation: pulseWild 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulseWild {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Glass Button Variants */
+.btn-glass {
+  @apply glass px-6 py-2 rounded-lg text-white font-medium transition-all duration-300 hover:scale-105 focus-wild;
+}
+
+.btn-glass-forest {
+  @apply glass-forest text-green-100 hover:text-white;
+}
+
+.btn-glass-ocean {
+  @apply glass-ocean text-blue-100 hover:text-white;
+}
+
+.btn-glass-sunset {
+  @apply glass-sunset text-orange-100 hover:text-white;
+}
+
+/* Card Glassmorphism */
+.card-glass {
+  @apply glass rounded-xl p-6 shadow-lg;
+}
+
+/* Input Glassmorphism */
+.input-glass {
+  @apply glass-subtle rounded-lg px-4 py-2 text-white placeholder-gray-300 border-0 focus-wild;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.input-glass::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Wild Nature Color Classes */
+.text-forest { color: var(--forest-green); }
+.text-moss { color: var(--moss-green); }
+.text-sage { color: var(--sage-green); }
+.text-earth { color: var(--earth-brown); }
+.text-bark { color: var(--bark-brown); }
+.text-sky { color: var(--sky-blue); }
+.text-ocean { color: var(--ocean-blue); }
+.text-sunset { color: var(--sunset-orange); }
+.text-golden { color: var(--golden-yellow); }
+.text-lavender { color: var(--lavender-purple); }
+.text-stone { color: var(--stone-gray); }
+.text-mist { color: var(--mist-white); }
+
+.bg-forest { background-color: var(--forest-green); }
+.bg-moss { background-color: var(--moss-green); }
+.bg-sage { background-color: var(--sage-green); }
+.bg-earth { background-color: var(--earth-brown); }
+.bg-bark { background-color: var(--bark-brown); }
+.bg-sky { background-color: var(--sky-blue); }
+.bg-ocean { background-color: var(--ocean-blue); }
+.bg-sunset { background-color: var(--sunset-orange); }
+.bg-golden { background-color: var(--golden-yellow); }
+.bg-lavender { background-color: var(--lavender-purple); }
+.bg-stone { background-color: var(--stone-gray); }
+.bg-mist { background-color: var(--mist-white); }
